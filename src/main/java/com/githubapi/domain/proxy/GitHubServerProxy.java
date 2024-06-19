@@ -29,7 +29,6 @@ public class GitHubServerProxy {
     }
 
     public ResponseEntity<List<GitHubRepoDto>> makeGetRequest(String userName) {
-
         String uri = UriComponentsBuilder.newInstance()
                 .scheme("https")
                 .host(url)
@@ -50,7 +49,6 @@ public class GitHubServerProxy {
     }
 
     public List<GitHubBranchWithNameAndCommitDto> makeGetBranchRequest(GitHubRepoDto repo) {
-
         String uri = UriComponentsBuilder.newInstance()
                 .scheme("https")
                 .host(url)
