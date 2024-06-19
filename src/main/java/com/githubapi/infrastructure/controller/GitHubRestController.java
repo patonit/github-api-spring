@@ -31,8 +31,6 @@ public class GitHubRestController {
     public ResponseEntity<List<GitHubAllResult>> getAllRepositoriesWhichAreNotForks(@RequestHeader String accept,
                                                                                     @PathVariable String userName) {
 
-        System.out.println("Accept is: " + accept);
-
         List<GitHubRepoDto> allRepositoriesNames = gitHubService.fetchListOfAllRepositoriesNames(accept, userName);
         gitHubService.addReposToDatabase(allRepositoriesNames);
         List<GitHubAllResult> response = gitHubService.fetchAllBranches(allRepositoriesNames);

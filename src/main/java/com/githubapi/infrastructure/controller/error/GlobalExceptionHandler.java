@@ -37,7 +37,7 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(RepoNotFoundException.class)
     public ResponseEntity<RepoNotFoundResponseDto> handleRepoNotFoundException(RepoNotFoundException exception) {
-        log.warn("RepoNotFoundException while accessing database.");
+        log.info("RepoNotFoundException while accessing database.");
         RepoNotFoundResponseDto errorRepoResponseDto = new RepoNotFoundResponseDto(exception.getMessage(), HttpStatus.NOT_FOUND);
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)

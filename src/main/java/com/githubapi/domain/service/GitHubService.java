@@ -30,7 +30,7 @@ public class GitHubService {
     }
 
     public List<GitHubRepoDto> fetchListOfAllRepositoriesNames(String accept, String userName) {
-        System.out.println("accept is (githubservice): " + accept);
+
         if (accept.equals("application/xml")) {
             log.info("Wrong header 'accept'.");
             throw new WrongAcceptHeaderException("Xml is not acceptable.");

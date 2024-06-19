@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class RepoRetriever {
+
     private final RepoRepository repoRepository;
 
     public RepoRetriever(RepoRepository repoRepository) {
